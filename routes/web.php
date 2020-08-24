@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PostController@all');
 Route::get('/posts/{post}', 'PostController@single');
+Route::get('/admin/{any}', 'AdminController@index')->where('any', '.*');
