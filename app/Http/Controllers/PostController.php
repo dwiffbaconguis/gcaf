@@ -21,6 +21,16 @@ class PostController extends Controller
         return view('posts.single', compact('post'));
     }
 
+    public function index()
+    {
+        return PostResource::collection(Post::latest()->paginate(5));
+    }
+
+    public function show(Post $post)
+    {
+        return new PostResource($post);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -46,5 +56,24 @@ class PostController extends Controller
         $post->save();
 
         return new PostResource($post);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        $post->update($request->only(['title', 'body']));
+
+        return new PostResource($post);
+    }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
+
+        return response()->json(null, 204);
     }
 }
