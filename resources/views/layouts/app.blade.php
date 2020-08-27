@@ -7,10 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -55,6 +54,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if (Auth::user()->hasRole('admin'))
+                                        <a class="dropdown-item" href="/admin/dashboard">
+                                            Dashboard
+                                        </a>
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

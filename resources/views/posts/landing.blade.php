@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <h2 class="card-title text-center">{{ $post->title }}</h2>
                             <p class="card-text"> {{ Str::limit($post->body, $limit = 280, $end = '...')  }}</p>
-                            <a href="/posts/{{ $post->id }}" class="btn btn-primary">Read more &rarr;</a>
+                            <a href="/posts/{{ $post->id }}" class="btn btn-primary">Watch the video &rarr;</a>
                         </div>
                         <div class="card-footer text-muted">
                             Post {{ $post->created_at->diffForHumans() }} by
