@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\CommentSent;
-use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Comment;
+use App\Events\CommentSent;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
     public function index(Post $post)
     {
-        return $post->comments()
-            ->with('user')
-            ->orderByDesc('id')
-            ->get();
+        return $post->comments()->with('user')->orderByDesc('id')->get();
     }
 
     public function store(Post $post)

@@ -1925,21 +1925,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     userName: {
@@ -1974,7 +1959,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get("/" + this.postId + "/comments").then(function (response) {
-        console.log(response.data);
         _this2.comments = response.data;
       });
     },
@@ -1992,7 +1976,7 @@ __webpack_require__.r(__webpack_exports__);
           body: body
         });
 
-        body = "";
+        _this3.$refs.body.value = "";
       });
     }
   }
@@ -44634,7 +44618,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                Submit\n            ")]
+            [_vm._v("Submit")]
           )
         ])
       ]),
@@ -44642,7 +44626,7 @@ var render = function() {
       _vm._l(_vm.comments, function(comment) {
         return _c("p", { key: comment.id, staticClass: "border p-3" }, [
           _c("strong", [_vm._v(_vm._s(comment.user.name))]),
-          _vm._v(":\n        "),
+          _vm._v(":\n    "),
           _c("span", [_vm._v(_vm._s(comment.body))])
         ])
       })
@@ -60307,10 +60291,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter("reverse", function (value) {
-  // slice to make a copy of array, then reverse the copy
-  return value.slice().reverse();
-});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.devtools = true;
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "history",
   routes: [{
@@ -60383,8 +60364,8 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: "pusher",
-  key: "d147ed31876da478c6a5",
-  cluster: "ap3",
+  key: "1f019f8fa10b4fb7b5d1",
+  cluster: "ap1",
   forceTLS: true
 });
 

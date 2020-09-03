@@ -9,11 +9,7 @@ import Update from "./components/Update";
 import Comments from "./components/Comments";
 
 Vue.use(VueRouter);
-
-Vue.filter("reverse", function(value) {
-    // slice to make a copy of array, then reverse the copy
-    return value.slice().reverse();
-});
+Vue.config.devtools = true;
 
 const router = new VueRouter({
     mode: "history",
