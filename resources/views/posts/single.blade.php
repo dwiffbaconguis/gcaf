@@ -12,7 +12,6 @@
           <hr>
           <p>Posted {{ $post->created_at->diffForHumans() }}</p>
           <hr>
-          {{-- <img class="img-fluid rounded" src="{!! !empty($post->image) ? '/uploads/posts/' . $post->image : 'http://placehold.it/750x300' !!}" alt=""> --}}
           <div class="embed-responsive embed-responsive-21by9">
             {!! $videoHtmlEmbeddedlink !!}
           </div>
