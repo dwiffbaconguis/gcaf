@@ -29,6 +29,16 @@
         required
       ></textarea>
     </div>
+    <div class="form-group">
+      <input
+        type="link"
+        class="form-control"
+        ref="link"
+        id="link"
+        placeholder="Enter link"
+        required
+      />
+    </div>
     <div class="custom-file mb-3">
       <input type="file" ref="image" name="image" id="image" class="custom-file-input" required />
       <label class="custom-file-label">Choose File...</label>
@@ -59,6 +69,7 @@ export default {
       formData.append("body", this.$refs.body.value);
       formData.append("user_id", this.userId);
       formData.append("image", this.$refs.image.files[0]);
+      formData.append("link", this.$refs.link.value);
       axios
         .post("/api/posts", formData)
         .then(response => {
@@ -77,6 +88,7 @@ export default {
         });
       this.$refs.title.value = "";
       this.$refs.body.value = "";
+      this.$refs.link.value = "";
     }
   }
 };

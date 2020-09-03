@@ -2032,6 +2032,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     userId: {
@@ -2055,6 +2065,7 @@ __webpack_require__.r(__webpack_exports__);
       formData.append("body", this.$refs.body.value);
       formData.append("user_id", this.userId);
       formData.append("image", this.$refs.image.files[0]);
+      formData.append("link", this.$refs.link.value);
       axios.post("/api/posts", formData).then(function (response) {
         _this.successful = true;
         _this.error = false;
@@ -2070,6 +2081,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.$refs.title.value = "";
       this.$refs.body.value = "";
+      this.$refs.link.value = "";
     }
   }
 });
@@ -44715,6 +44727,19 @@ var render = function() {
           id: "body",
           rows: "8",
           placeholder: "Enter body",
+          required: ""
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("input", {
+        ref: "link",
+        staticClass: "form-control",
+        attrs: {
+          type: "link",
+          id: "link",
+          placeholder: "Enter link",
           required: ""
         }
       })

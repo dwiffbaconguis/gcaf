@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->binary('image')->nullable();
+            $table->string('link');
             $table->timestamps();
         });
     }

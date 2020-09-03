@@ -38,6 +38,7 @@ class PostController extends Controller
             'body' => 'required',
             'user_id' => 'required',
             'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
+            'link' => 'required',
         ]);
 
         $post = new Post;
@@ -53,6 +54,7 @@ class PostController extends Controller
         $post->user_id = $request->user_id;
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->link = $request->link;
         $post->save();
 
         return new PostResource($post);
