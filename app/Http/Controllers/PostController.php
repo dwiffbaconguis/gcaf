@@ -18,7 +18,9 @@ class PostController extends Controller
 
     public function single(Post $post)
     {
-        return view('posts.single', compact('post'));
+        $videoHtmlEmbeddedlink = $post->getVideoHTMLAttribute();
+
+        return view('posts.single', compact('post', 'videoHtmlEmbeddedlink'));
     }
 
     public function index()
