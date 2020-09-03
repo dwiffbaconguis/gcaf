@@ -14,16 +14,25 @@ class PostTableSeeder extends Seeder
     {
         $post = new Post;
         $post->user_id = 2;
-        $post->title = "What is Lorem Ipsum?";
-        $post->body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-        $post->link = 'https://www.youtube.com/watch?v=Zsl6YXHdWnE';
+        $post->title = "Growing to the New Normal";
+        $post->body = "Shalom! A joyful Sunday to you all!
+        Let us worship our faithful God excitedly by singing our hearts out and listening to the preaching of His Word. May this day be a blessing to all.
+        1. Share in the group any or a particular area in your life during this New Normal that you have seen God moved and helped your through.
+        2. Knowing about these truths from God, how do you think should these change/grow your current situation in this New Normal?";
+        $post->link = 'https://www.youtube.com/watch?v=jqUvZmtRwMM';
         $post->save();
 
         $post = new Post;
-        $post->user_id = 1;
-        $post->title = "Why do we use it?";
-        $post->body = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
-        $post->link = 'https://www.youtube.com/watch?v=Zsl6YXHdWnE';
+        $post->user_id = 2;
+        $post->title = "Conquering the New Normal";
+        $post->body = "What a wonderful day that God has given to us! He is almighty, unchangeable God, King of kings, Lord of lords, clothed in majesty.
+        Let us exalt His Name together. May we be excited in singing praises and worshipping our faithful and sovereign God.
+        Here is the link for YouTube in case of technical difficulty or lag in FB premiere.
+        Small Group Discussion Questions:
+            1. How did the Lord speak to you through the preaching of His Word?
+            2. What are the hurdles that you encounter in practicing the winning attitude that Christ had shown?
+            3. In your specific relationship, what particular application of Christ's example would you imitate?";
+        $post->link = 'https://www.youtube.com/watch?v=ON4fhKPyeyc';
         $post->save();
     }
 }
